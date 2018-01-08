@@ -66,10 +66,3 @@
         margin-top: 0;
     }
 
-.percentage { color: black; }
-    .percentage.positive {
-        color: green;
-    }
-    .percentage.negative {
-        color: red;
-    }

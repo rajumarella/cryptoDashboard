@@ -3,134 +3,8 @@
     ViewData["SubTitle"] = " Material Dashboard";
 }
 @model CoinObject
-
-<div class="row">
-    <div class="col-lg-2 col-md-2 col-sm-2">
-        <div class="card card-stats">
-            <div class="card-header" data-background-color="blue">
-                <i class="material-icons">@Model.Display.Btc.Usd["FROMSYMBOL"]</i>
-            </div>
-            <div class="card-content">
-                <p class="category">BitCoin</p>
-                <p class="title">
-                    @Model.Display.Btc.Usd["PRICE"]
-                </p>
-                <p class="title percentage">
-                    (@Model.Display.Btc.Usd["CHANGEPCT24HOUR"])
-                </p>
-            </div>
-            <div class="card-footer">
-                <div class="stats">
-                    <i class="material-icons">update</i>  @Model.Display.Btc.Usd["LASTUPDATE"]
-                    <i>from @Model.Display.Btc.Usd["LASTMARKET"]</i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-2">
-        <div class="card card-stats">
-            <div class="card-header" data-background-color="blue">
-                <i class="material-icons">@Model.Display.Eth.Usd["FROMSYMBOL"]</i>
-            </div>
-            <div class="card-content">
-                <p class="category">Ethereum</p>
-                <p class="title">
-                    @Model.Display.Eth.Usd["PRICE"]
-                </p>
-                <p class="title">
-                    (@Model.Display.Eth.Usd["CHANGEPCT24HOUR"])
-                </p>
-            </div>
-            <div class="card-footer">
-                <div class="stats">
-                    <i class="material-icons">update</i>  @Model.Display.Eth.Usd["LASTUPDATE"]
-                    <i>from @Model.Display.Eth.Usd["LASTMARKET"]</i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-2">
-        <div class="card card-stats">
-            <div class="card-header" data-background-color="blue">
-                <i class="material-icons">@Model.Display.Ltc.Usd["FROMSYMBOL"]</i>
-            </div>
-            <div class="card-content">
-                <p class="category">DigitalCash</p>
-                <p class="title">
-                    @Model.Display.Ltc.Usd["PRICE"]
-                </p>
-                <p class="title">
-                    (@Model.Display.Ltc.Usd["CHANGEPCT24HOUR"])
-                </p>
-            </div>
-            <div class="card-footer">
-                <div class="stats">
-                    <i class="material-icons">update</i>  @Model.Display.Ltc.Usd["LASTUPDATE"]
-                    <i>from @Model.Display.Ltc.Usd["LASTMARKET"]</i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-2">
-        <div class="card card-stats">
-            <div class="card-header" data-background-color="blue">
-                <i class="material-icons">@Model.Display.Zec.Usd["FROMSYMBOL"]</i>
-            </div>
-            <div class="card-content">
-                <p class="category">ZCash</p>
-                <p class="title">
-                    @Model.Display.Zec.Usd["PRICE"]
-                </p>
-                <p class="title">
-                    (@Model.Display.Zec.Usd["CHANGEPCT24HOUR"])
-                </p>
-            </div>
-            <div class="card-footer">
-                <div class="stats">
-                    <i class="material-icons">update</i>  @Model.Display.Zec.Usd["LASTUPDATE"]
-                    <i>from @Model.Display.Zec.Usd["LASTMARKET"]</i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-2">
-        <div class="card card-stats">
-            <div class="card-header" data-background-color="blue">
-                <i class="material-icons">@Model.Display.Dash.Usd["FROMSYMBOL"]</i>
-            </div>
-            <div class="card-content">
-                <p class="category">DASH</p>
-                <p class="title">
-                    @Model.Display.Dash.Usd["PRICE"]
-                </p>
-                <p class="title">
-                    (@Model.Display.Dash.Usd["CHANGEPCT24HOUR"])
-                </p>
-            </div>
-            <div class="card-footer">
-                <div class="stats">
-                    <i class="material-icons">update</i>  @Model.Display.Dash.Usd["LASTUPDATE"]
-                    <i>from @Model.Display.Dash.Usd["LASTMARKET"]</i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-2">
-        <div class="card card-stats">
-            <div class="card-header" data-background-color="blue">
-                <i class="fa fa-twitter"></i>
-            </div>
-            <div class="card-content">
-                <p class="category">Followers</p>
-                <h3 class="title">+245</h3>
-            </div>
-            <div class="card-footer">
-                <div class="stats">
-                    <i class="material-icons">update</i> Just Updated
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="row" id="HighRatedList">
+    @Html.Partial("~/Views/CoinList/_CoinWidgetPartial.cshtml", @Model)
 </div>
 <div class="row">
     <div class="col-md-4">
@@ -451,3 +325,21 @@
         </div>
     </div>
 </div>
+
+@section Scripts{
+    <script type="text/javascript">
+        $(function () {
+            // On initial load
+            $(".percentage:contains('-')").removeClass('text-success').addClass('text-danger');
+            $('.percentage:not(:contains("-"))').removeClass('text-danger').addClass('text-success');
+
+            setInterval(function () {
+                $("#HighRatedList").load("@Url.Action("GetData", "CoinList")", function (text, status, xhr) {
+                    $(".percentage:contains('-')").removeClass('text-success').addClass('text-danger');
+                    $('.percentage:not(:contains("-"))').removeClass('text-danger').addClass('text-success');
+                });
+            }, 2000);
+        });
+    </script>
+}
+
