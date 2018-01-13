@@ -5051,7 +5051,7 @@
       ]
     },
     "Microsoft.ApplicationInsights/2.4.0": {
-      "sha512": "9aiAw3PxchxDewnSca3zfF6dYI9Yj0sAmVTTCB9NhybQ9Lw28exGqZvBekwyEPfIpZN+xsmxTs9bdKllOygg1w==",
+      "sha512": "4dX/zu3Psz9oM3ErU64xfOHuSxOwMxN6q5RabSkeYbX42Yn6dR/kDToqjs+txCRjrfHUxyYjfeJHu+MbCfvAsg==",
       "type": "package",
       "path": "microsoft.applicationinsights/2.4.0",
       "files": [
@@ -5071,7 +5071,7 @@
       ]
     },
     "Microsoft.ApplicationInsights.AspNetCore/2.1.1": {
-      "sha512": "oqR1gIIkh+XjlZxqYiyhWFXml9u62eXyE5Br39X3R8s+7Zu+MVWcNrozl39ilkCKbqO0WwCXMtZdDaaxC9ltcQ==",
+      "sha512": "kiGmzl9Cav34dF7AHVMoJxdJJQEeLB8KZGNwX1LjImG9iem5hGk4DkHpW7/m9Nh3DrL8IKSL3mqQo+IPqWfMRQ==",
       "type": "package",
       "path": "microsoft.applicationinsights.aspnetcore/2.1.1",
       "files": [
@@ -5084,7 +5084,7 @@
       ]
     },
     "Microsoft.ApplicationInsights.DependencyCollector/2.4.1": {
-      "sha512": "AY0elf2wWqGF8WiJJWzn9bXV4AgKN7/SsEs5YiK9m9U1qOs3ulWS04aAuBMITFCM4DlcLgaKI8XQLAdNpCYWtg==",
+      "sha512": "RWxdX90MY6tNF8S5lwRvJcHiBMIWwVLCxd4TGIEl3X0yAKaolY2vs4zTCvyCIVkEAMs1aInTgWkYwOjzYvAHWw==",
       "type": "package",
       "path": "microsoft.applicationinsights.dependencycollector/2.4.1",
       "files": [
@@ -8015,7 +8015,7 @@
       ]
     },
     "Remotion.Linq/2.1.1": {
-      "sha512": "I1qMfK/dPt4VY2BjBl0VttgodNbD0jeDPrPpS5BrmUjjXhnJtMnJUQA4PUkgLqSx4kRqwPxAZg9p884U5eqBbA==",
+      "sha512": "IJn0BqkvwEDpP+2qjvci7n4/a9f7DhKESLWb2/uG4xQh3rTkGTBUz69bI4IivCoKkTFAqjXxYDZw2K/npohjsw==",
       "type": "package",
       "path": "remotion.linq/2.1.1",
       "files": [
@@ -10182,7 +10182,7 @@
       ]
     },
     "System.Linq.Queryable/4.0.1": {
-      "sha512": "b0Pe9ZbRDuurk4cADnEsRfmTQ2r2LzePiY4mUFZqDXcyHg7+Dzt9PHB9WqXao9vJhAd0R4IOIprAV65khoFTMQ==",
+      "sha512": "Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
       "type": "package",
       "path": "system.linq.queryable/4.0.1",
       "files": [
@@ -10436,7 +10436,7 @@
       ]
     },
     "System.Net.Security/4.3.0": {
-      "sha512": "cBE4HzaZnSVmziVaTjEaIQA/apTZluAQfKZrO0qVS55dVwVfAmyQYduAh1vpBWx2R25o865jJPfOmFmqI15+EQ==",
+      "sha512": "IgJKNfALqw7JRWp5LMQ5SWHNKvXVz094U6wNE3c1i8bOkMQvgBL+MMQuNt3xl9Qg9iWpj3lFxPZEY6XHmROjMQ==",
       "type": "package",
       "path": "system.net.security/4.3.0",
       "files": [
@@ -10621,7 +10621,7 @@
       ]
     },
     "System.Private.DataContractSerialization/4.1.1": {
-      "sha512": "Z6Oq8jX5tiH0ASS4yPRcDCwpUt1t8xs84Uq1a0qKUwdOosLNUqYjSFp9pyiFtfbN4B/bmyzCbHfVuvi2h4B/2w==",
+      "sha512": "lcqFBUaCZxPiUkA4dlSOoPZGtZsAuuElH2XHgLwGLxd7ZozWetV5yiz0qGAV2AUYOqw97MtZBjbLMN16Xz4vXA==",
       "type": "package",
       "path": "system.private.datacontractserialization/4.1.1",
       "files": [
@@ -12949,7 +12949,7 @@
       ]
     },
     "System.Xml.XmlSerializer/4.0.11": {
-      "sha512": "Td/KKwTRvOwcFSS6wnZ0pHjIEAzyU8pqulH7ay8qeRSVEdP/6uQ5Oj/kNH4Q4SywaBet0QbdKbZDVrrWXe9BKg==",
+      "sha512": "FrazwwqfIXTfq23mfv4zH+BjqkSFNaNFBtjzu3I9NRmG8EELYyrv/fJnttCIwRMFRR/YKXF1hmsMmMEnl55HGw==",
       "type": "package",
       "path": "system.xml.xmlserializer/4.0.11",
       "files": [
@@ -13122,7 +13122,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SaiBapiraju\\.nuget\\packages\\": {},
+    "C:\\Users\\SaiMarella\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13131,17 +13131,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\SaiBapiraju\\source\\repos\\Crypto227\\cryptoDashboard\\Crypto227\\Crypto227.csproj",
+      "projectUniqueName": "C:\\Practice\\Crypto\\trunk\\Crypto227\\Crypto227.csproj",
       "projectName": "Crypto227",
-      "projectPath": "C:\\Users\\SaiBapiraju\\source\\repos\\Crypto227\\cryptoDashboard\\Crypto227\\Crypto227.csproj",
-      "packagesPath": "C:\\Users\\SaiBapiraju\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SaiBapiraju\\source\\repos\\Crypto227\\cryptoDashboard\\Crypto227\\obj\\",
+      "projectPath": "C:\\Practice\\Crypto\\trunk\\Crypto227\\Crypto227.csproj",
+      "packagesPath": "C:\\Users\\SaiMarella\\.nuget\\packages\\",
+      "outputPath": "C:\\Practice\\Crypto\\trunk\\Crypto227\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\SaiBapiraju\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\SaiMarella\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

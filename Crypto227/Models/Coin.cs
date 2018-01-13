@@ -1,46 +1,48 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using Crypto227.Supporters;
+using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Crypto227.Models
 {
-
-    public partial class CoinObject
+    /// <summary>
+    ///  RAW and DISPLAY details will be saved as keys
+    /// </summary>
+    public class Coin
     {
-        [JsonProperty("RAW")]
-        public Raw Raw { get; set; }
+        [JsonConverter(typeof(CoinConverter))]
+        public Dictionary<string, DataType> DataTypes { get; set; }
 
-        [JsonProperty("DISPLAY")]
-        public Display Display { get; set; }
+        public Coin()
+        {
+            DataTypes = new Dictionary<string, DataType>();
+        }
     }
 
-    public partial class Raw
+    /// <summary>
+    /// BTC and other coins 
+    /// </summary>
+    public class DataType
     {
-        [JsonProperty("BTC")]
-        public Eth Btc { get; set; }
+        public  Dictionary<string, CoinType> CoinTypes { get; set; }
 
-        [JsonProperty("ETH")]
-        public Eth Eth { get; set; }
-
-        [JsonProperty("LTC")]
-        public Eth Ltc { get; set; }
-
-        [JsonProperty("ZEC")]
-        public Eth Zec { get; set; }
-
-        [JsonProperty("DASH")]
-        public Eth Dash { get; set; }
+        public DataType()
+        {
+            CoinTypes = new Dictionary<string, CoinType>();
+        }
     }
 
-    public partial class Eth
+    public class CoinType
     {
-        [JsonProperty("USD")]
-        public EthUsd Usd { get; set; }
+        public Dictionary<string, CurrencyParam> Currencies { get; set; }
+
+        public CoinType()
+        {
+            Currencies = new Dictionary<string, CurrencyParam>();
+        }
     }
 
-    public partial class EthUsd
+    
+    public partial class CurrencyParam
     {
         [JsonProperty("TYPE")]
         public string Type { get; set; }
@@ -58,99 +60,75 @@ namespace Crypto227.Models
         public string Flags { get; set; }
 
         [JsonProperty("PRICE")]
-        public double Price { get; set; }
+        public string Price { get; set; }
 
         [JsonProperty("LASTUPDATE")]
-        public long Lastupdate { get; set; }
+        public string Lastupdate { get; set; }
 
         [JsonProperty("LASTVOLUME")]
-        public double Lastvolume { get; set; }
+        public string Lastvolume { get; set; }
 
         [JsonProperty("LASTVOLUMETO")]
-        public double Lastvolumeto { get; set; }
+        public string Lastvolumeto { get; set; }
 
         [JsonProperty("LASTTRADEID")]
         public string Lasttradeid { get; set; }
 
         [JsonProperty("VOLUMEDAY")]
-        public double Volumeday { get; set; }
+        public string Volumeday { get; set; }
 
         [JsonProperty("VOLUMEDAYTO")]
-        public double Volumedayto { get; set; }
+        public string Volumedayto { get; set; }
 
         [JsonProperty("VOLUME24HOUR")]
-        public double Volume24Hour { get; set; }
+        public string Volume24Hour { get; set; }
 
         [JsonProperty("VOLUME24HOURTO")]
-        public double Volume24Hourto { get; set; }
+        public string Volume24Hourto { get; set; }
 
         [JsonProperty("OPENDAY")]
-        public double Openday { get; set; }
+        public string Openday { get; set; }
 
         [JsonProperty("HIGHDAY")]
-        public double Highday { get; set; }
+        public string Highday { get; set; }
 
         [JsonProperty("LOWDAY")]
-        public double Lowday { get; set; }
+        public string Lowday { get; set; }
 
         [JsonProperty("OPEN24HOUR")]
-        public double Open24Hour { get; set; }
+        public string Open24Hour { get; set; }
 
         [JsonProperty("HIGH24HOUR")]
-        public double High24Hour { get; set; }
+        public string High24Hour { get; set; }
 
         [JsonProperty("LOW24HOUR")]
-        public double Low24Hour { get; set; }
+        public string Low24Hour { get; set; }
 
         [JsonProperty("LASTMARKET")]
         public string Lastmarket { get; set; }
 
         [JsonProperty("CHANGE24HOUR")]
-        public double Change24Hour { get; set; }
+        public string Change24Hour { get; set; }
 
         [JsonProperty("CHANGEPCT24HOUR")]
-        public double Changepct24Hour { get; set; }
+        public string Changepct24Hour { get; set; }
 
         [JsonProperty("CHANGEDAY")]
-        public double Changeday { get; set; }
+        public string Changeday { get; set; }
 
         [JsonProperty("CHANGEPCTDAY")]
-        public double Changepctday { get; set; }
+        public string Changepctday { get; set; }
 
         [JsonProperty("SUPPLY")]
-        public double Supply { get; set; }
+        public string Supply { get; set; }
 
         [JsonProperty("MKTCAP")]
-        public double Mktcap { get; set; }
+        public string Mktcap { get; set; }
 
         [JsonProperty("TOTALVOLUME24H")]
-        public double Totalvolume24H { get; set; }
+        public string Totalvolume24H { get; set; }
 
         [JsonProperty("TOTALVOLUME24HTO")]
-        public double Totalvolume24Hto { get; set; }
-    }
-
-  public partial class Display
-    {
-        [JsonProperty("BTC")]
-        public Display Btc { get; set; }
-
-        [JsonProperty("ETH")]
-        public Display Eth { get; set; }
-
-        [JsonProperty("LTC")]
-        public Display Ltc { get; set; }
-
-        [JsonProperty("ZEC")]
-        public Display Zec { get; set; }
-
-        [JsonProperty("DASH")]
-        public Display Dash { get; set; }
-    }
-
-    public partial class Display
-    {
-        [JsonProperty("USD")]
-        public Dictionary<string, string> Usd { get; set; }
+        public string Totalvolume24Hto { get; set; }
     }
 }

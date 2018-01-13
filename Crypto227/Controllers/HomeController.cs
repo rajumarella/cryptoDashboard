@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Crypto227.Models;
 using System.Net.Http;
 using Newtonsoft.Json;
+using Crypto227.Supporters;
 
 namespace Crypto227.Controllers
 {
@@ -12,27 +14,7 @@ namespace Crypto227.Controllers
     {
         public async Task<IActionResult> Index()
         {
-            CoinObject coinDetails;
-
-            using (var client = new HttpClient())
-            {
-                try
-                {
-                    var coinType = "BTC,ETH,LTC,ZEC,DASH";
-                    var currencyType = "USD";
-                    client.BaseAddress = new Uri("https://min-api.cryptocompare.com");
-                    var response = await client.GetAsync($"/data/pricemultifull?fsyms={coinType}&tsyms={currencyType}");
-                    response.EnsureSuccessStatusCode();
-
-                    var stringResult = await response.Content.ReadAsStringAsync();
-                    coinDetails = JsonConvert.DeserializeObject<CoinObject>(stringResult);
-                }
-                catch (HttpRequestException httpRequestException)
-                {
-                    return BadRequest($"Error getting weather from CyptoCompare: {httpRequestException.Message}");
-                }
-            }
-
+            var coinDetails = await CoinService.GetCoinDetails();
             return View("Index", coinDetails);
         }
 

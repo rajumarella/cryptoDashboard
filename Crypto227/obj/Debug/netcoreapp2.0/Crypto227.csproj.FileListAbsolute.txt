@@ -20,3 +20,14 @@ C:\Users\SaiBapiraju\source\repos\Crypto227\cryptoDashboard\Crypto227\obj\Debug\
 C:\Users\SaiBapiraju\source\repos\Crypto227\cryptoDashboard\Crypto227\obj\Debug\netcoreapp2.0\Crypto227.AssemblyInfo.cs
 C:\Users\SaiBapiraju\source\repos\Crypto227\cryptoDashboard\Crypto227\obj\Debug\netcoreapp2.0\Crypto227.dll
 C:\Users\SaiBapiraju\source\repos\Crypto227\cryptoDashboard\Crypto227\obj\Debug\netcoreapp2.0\Crypto227.pdb
+C:\Practice\Crypto\trunk\Crypto227\bin\Debug\netcoreapp2.0\Crypto227.deps.json
+C:\Practice\Crypto\trunk\Crypto227\bin\Debug\netcoreapp2.0\Crypto227.runtimeconfig.json
+C:\Practice\Crypto\trunk\Crypto227\bin\Debug\netcoreapp2.0\Crypto227.runtimeconfig.dev.json
+C:\Practice\Crypto\trunk\Crypto227\bin\Debug\netcoreapp2.0\Crypto227.dll
+C:\Practice\Crypto\trunk\Crypto227\bin\Debug\netcoreapp2.0\Crypto227.pdb
+C:\Practice\Crypto\trunk\Crypto227\obj\Debug\netcoreapp2.0\Crypto227.csprojResolveAssemblyReference.cache
+C:\Practice\Crypto\trunk\Crypto227\obj\Debug\netcoreapp2.0\Crypto227.csproj.CoreCompileInputs.cache
+C:\Practice\Crypto\trunk\Crypto227\obj\Debug\netcoreapp2.0\Crypto227.AssemblyInfoInputs.cache
+C:\Practice\Crypto\trunk\Crypto227\obj\Debug\netcoreapp2.0\Crypto227.AssemblyInfo.cs
+C:\Practice\Crypto\trunk\Crypto227\obj\Debug\netcoreapp2.0\Crypto227.dll
+C:\Practice\Crypto\trunk\Crypto227\obj\Debug\netcoreapp2.0\Crypto227.pdb
