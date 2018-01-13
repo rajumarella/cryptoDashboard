@@ -7,14 +7,28 @@ using Crypto227.Models;
 using System.Net.Http;
 using Newtonsoft.Json;
 using Crypto227.Supporters;
+using Microsoft.Extensions.Configuration;
 
 namespace Crypto227.Controllers
 {
     public class HomeController : Controller
     {
+        public string CoinTypes { get; }
+
+        public string CurrencyTypes { get; }
+
+        public string CryptoCompareUrl { get; set; }
+
+        public HomeController(IConfiguration configuration)
+        {
+            CoinTypes = configuration.GetSection("ApplicationSettings").GetSection("CoinTypes").Value;
+            CurrencyTypes = configuration.GetSection("ApplicationSettings").GetSection("CurrencyTypes").Value;
+            CryptoCompareUrl = configuration.GetSection("ApplicationSettings").GetSection("CryptoCompareUrl").Value;
+        }
+
         public async Task<IActionResult> Index()
         {
-            var coinDetails = await CoinService.GetCoinDetails();
+            var coinDetails = await CoinService.GetCoinDetails(CoinTypes, CurrencyTypes, CryptoCompareUrl);
             return View("Index", coinDetails);
         }
 
