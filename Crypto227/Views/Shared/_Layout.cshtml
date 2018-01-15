@@ -71,10 +71,11 @@
                 <script src="~/js/bootstrap-notify.js"></script>
                 <script src="~/js/material-dashboard.js?v=1.2.0"></script>
                 <script src="~/js/common.js" asp-append-version="true"></script>
-                <script src="~/js/site.js" asp-append-version="true"></script>
+                @*<script src="~/js/site.js" asp-append-version="true"></script>*@
                 <script type="text/javascript">
                     $(document).ready(function () {
-                        demo.initDashboardPageCharts();
+                        //demo.initDashboardPageCharts();
+                        $('.dropdown-toggle').dropdown();
                     });
                 </script>
             </environment>
@@ -98,7 +99,7 @@
                         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
                         crossorigin="anonymous"></script>
               
-                <script src="~/js/site.min.js" asp-append-version="true"></script>
+                @*<script src="~/js/site.min.js" asp-append-version="true"></script>*@
             </environment>
         </div>
     </div>

@@ -28,8 +28,10 @@ namespace Crypto227.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var coinDetails = await CoinService.GetCoinDetails(CoinTypes, CurrencyTypes, CryptoCompareUrl);
-            return View("Index", coinDetails);
+            var coinMain = new CoinMain();
+            coinMain.CoinHeader = await CoinService.GetCoinDetails(CoinTypes, CurrencyTypes, CryptoCompareUrl);
+            coinMain.CoinDetialByVolume = await CoinService.GetCoinDetailsByVolume("BTC", CryptoCompareUrl);
+            return View("Index", coinMain);
         }
 
         public IActionResult About()

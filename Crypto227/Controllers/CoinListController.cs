@@ -30,13 +30,17 @@ namespace Crypto227.Controllers
         }
 
         [HttpGet]
-        [ResponseCache(VaryByHeader = "User-Agent", Duration = 2)]
         public async Task<IActionResult> GetData()
         {
             var coinDetails = await CoinService.GetCoinDetails(CoinTypes, CurrencyTypes, CryptoCompareUrl);
             return  PartialView("_CoinWidgetPartial", coinDetails);
         }
 
-        
+        [HttpGet]
+        public async Task<IActionResult> GetCoinListByVolumne()
+        {
+            var coinDetails = await CoinService.GetCoinDetailsByVolume("BTC", CryptoCompareUrl);
+            return PartialView("_CoinListByVolume", coinDetails);
+        }
     }
 }

@@ -5,22 +5,24 @@
         var display = Model.DataTypes.FirstOrDefault(x => x.Key.Equals("DISPLAY", StringComparison.OrdinalIgnoreCase));
 
         foreach (var coinType in display.Value.CoinTypes)
-         {
-             var coinName = coinType.Key;
-             var usdCurrency = coinType.Value.Currencies.FirstOrDefault(x=> x.Key.Equals("USD")).Value;
-      
+        {
+            var coinName = coinType.Key;
+            var usdCurrency = coinType.Value.Currencies.FirstOrDefault(x=> x.Key.Equals("USD")).Value;
+
            <div class="col-lg-2 col-md-2 col-sm-2">
                <div class="card card-stats">
                    <div class="card-header" data-background-color="blue">
-                       <i class="material-icons">@usdCurrency["FROMSYMBOL"]</i>
+                        <p class="category">
+                            @coinName
+                        </p>
                    </div>
                    <div class="card-content">
-                       <p class="category">@coinName</p>
+                      
                        <p class="title price">
                            @usdCurrency["PRICE"]
                        </p>
                        <p class="title percentage">
-                           @usdCurrency["CHANGEPCT24HOUR"]
+                           (@usdCurrency["CHANGEPCT24HOUR"]%)
                        </p>
                    </div>
                    <div class="card-footer">
